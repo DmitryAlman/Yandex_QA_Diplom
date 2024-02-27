@@ -1,2 +1,2 @@
-Задача 1 - select "Couriers".login, count("Orders"."inDelivery") from "Orders" join "Couriers" on "Orders"."courierId" = "Couriers".id where "Orders"."inDelivery" = True group by "Couriers".login;
+Задача 1 - select "Couriers".login, count(*) from "Orders" join "Couriers" on "Orders"."courierId" = "Couriers".id where "Orders"."inDelivery" = True group by "Couriers".login;
 Задача 2 - select track, case when finished = True then 2 when cancelled = true then -1 when "inDelivery" = True then 1 else 0 end from "Orders";
